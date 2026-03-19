@@ -84,3 +84,12 @@ If I had more time to expand this mini-project for a true production environment
 1. **Vanilla CSS vs. Frameworks**: To keep dependencies minimal and demonstrate a foundational understanding of UI styling and CSS variables, I used standard React with Vanilla CSS. A known shortcut here is missing out on established design systems like Tailwind CSS or component libraries (MUI/Chakra/Shadcn), which normally speed up scalable, accessible UI development.
 2. **Error Handling Granularity**: The backend currently catches broad LLM SDK errors and bubbles a generic "Failed to generate summary" message to the frontend. In a real system, I would explicitly map and bubble up specific errors (e.g., 429 Rate Limits, 401 Unauthorized, Timeouts) to dynamically guide the user on what went wrong.
 3. **No Database Integration**: To focus purely on the core LLM pipeline constraint, I bypassed setting up a database (e.g., PostgreSQL/MongoDB). History is not maintained, so summaries are ephemeral and lost on a page refresh.
+
+---
+
+## 📸 App Screenshots
+
+Below is an example of the AI Summarizer interface securely processing unstructured text into intelligent JSON chunks:
+
+![App Input & Analyze Button](./docs/screenshot-1.png)
+![App Output & Sentiment](./docs/screenshot-2.png)
