@@ -1,4 +1,4 @@
-# AI Assignment Summarizer
+<img width="1920" height="1080" alt="Screenshot 2026-03-19 201952" src="https://github.com/user-attachments/assets/45926002-842a-45a4-8b53-5bf017850c61" /># AI Assignment Summarizer
 
 A full-stack application that takes unstructured text input, sends it to an LLM via a Node.js Express backend, and returns a structured JSON summary (summary, key points, sentiment) displayed on a clean React frontend.
 
@@ -56,6 +56,114 @@ Generating strict, parseable JSON from an LLM requires rigorous prompt engineeri
 ### The Prompt Used to Bootstrap the Architecture
 To architect the foundational boilerplates for this full-stack assignment, the following comprehensive prompt was utilized:
 
+Act as a senior full-stack developer with strong experience in React.js, Node.js, and LLM integrations.
+
+Your task is to generate a complete, production-quality mini project based on the following requirements:
+
+PROJECT GOAL:
+Build a full-stack application that takes unstructured text input, sends it to an LLM API, and returns a structured JSON summary.
+
+TECH STACK:
+- Frontend: React.js with Vite
+- Backend: Node.js with Express
+- LLM: OpenAI-compatible API
+- Other: dotenv, cors, axios/fetch
+
+FEATURE REQUIREMENTS:
+1. Input:
+   - Textarea for user input
+   - Optional file upload (bonus)
+
+2. Processing:
+   - Send input text to backend API (/api/summarize)
+   - Backend calls LLM with a strong structured prompt
+
+3. Output:
+   - JSON response with:
+     {
+       "summary": "one sentence",
+       "keyPoints": ["point 1", "point 2", "point 3"],
+       "sentiment": "positive | neutral | negative"
+     }
+
+4. UI:
+   - Clean, minimal UI
+   - Loading state ("Analyzing...")
+   - Display result in cards/sections
+   - Error messages for failures
+
+BACKEND REQUIREMENTS:
+- Create Express server
+- One POST route: /api/summarize
+- Validate input (non-empty string)
+- Use environment variable for API key
+- Handle errors:
+  - Empty input
+  - API failure
+  - Invalid JSON from LLM
+
+PROMPT DESIGN (IMPORTANT):
+Use a strong LLM prompt like:
+"You are an assistant that converts unstructured text into strict JSON..."
+
+Ensure:
+- Only JSON output
+- No markdown
+- Exact schema
+
+PROJECT STRUCTURE:
+Generate full folder structure like:
+
+assignment-summarizer/
+  client/
+    src/
+      App.jsx
+      main.jsx
+      components/
+        ResultCard.jsx
+    index.html
+    package.json
+  server/
+    src/
+      index.js
+      llm.js
+      prompt.js
+      validate.js
+    .env.example
+    package.json
+  README.md
+
+CODE QUALITY:
+- Clean, readable, modular code
+- Use async/await
+- Separate concerns (routes, LLM logic, validation)
+- Use best practices
+
+README REQUIREMENTS:
+Write a professional README including:
+- Project overview
+- Tech stack
+- Setup instructions
+- .env configuration
+- How to run frontend & backend
+- Prompt design explanation
+- Trade-offs
+- Future improvements
+- Example output
+
+EXTRA (IMPORTANT FOR INTERVIEW):
+- Keep solution simple and explainable
+- Do NOT over-engineer
+- Focus on clarity and correctness
+
+OUTPUT FORMAT:
+1. Folder structure
+2. Full backend code (all files)
+3. Full frontend code (all files)
+4. README.md
+
+Make the project look like it was built by a professional developer for an internship assignment.
+
 > "Act as a senior full-stack developer with strong experience in React.js, Node.js, and LLM integrations. Your task is to generate a complete, production-quality mini project based on the following requirements:
 > 
 > PROJECT GOAL: Build a full-stack application that takes unstructured text input, sends it to an LLM API, and returns a structured JSON summary.
@@ -90,6 +198,5 @@ If I had more time to expand this mini-project for a true production environment
 ## 📸 App Screenshots
 
 Below is an example of the AI Summarizer interface securely processing unstructured text into intelligent JSON chunks:
+<img width="1920" height="1080" alt="Screenshot 2026-03-19 202028" src="https://github.com/user-attachments/assets/1bd4dd9e-9eac-436d-ab42-4d43fd063b3b" />
 
-![App Input & Analyze Button](./docs/screenshot-1.png)
-![App Output & Sentiment](./docs/screenshot-2.png)
