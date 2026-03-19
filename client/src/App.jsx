@@ -18,7 +18,7 @@ function App() {
     setResult(null);
 
     try {
-      const response = await fetch('http://localhost:5000/api/summarize', {
+      const response = await fetch('https://zoo-media-ai-intern-3ofk.vercel.app/api/summarize', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -34,7 +34,7 @@ function App() {
 
       setResult(data);
     } catch (err) {
-      setError(err.message || 'Failed to connect to the server. Is it running on port 5000?');
+      setError(err.message || 'Failed to connect to the production Vercel server.');
     } finally {
       setLoading(false);
     }
